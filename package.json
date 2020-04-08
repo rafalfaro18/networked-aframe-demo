@@ -1,0 +1,12 @@
+{
+    "name": "naf-tutorial",
+    "version": "1.0.0",
+    "description": "Multi-user virtual reality with networked aframe demo",
+    "scripts": {
+        "start": "node ./server/index.js"
+    },
+    "author": "Rafael Alfaro <rafalfaro_18@outlook.com> (http://rafalfaro.com)",
+    "dependencies": {
+        "networked-aframe": "^0.7.0"
+    }
+}
