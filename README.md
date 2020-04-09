@@ -13,7 +13,7 @@ Networked Aframe Demo
 npm install
 ```
 
-- Create an SSL certificate and put the key.pem and cert.pem files in the project folder. You can do this by running in the terminal while inside the project folder (add a passphrase when prompted if not sure what this is just type PASSPHRASE): 
+- Create an SSL certificate and put the key.pem and cert.pem files in the project folder. You can do this by running the folllowing command in the terminal while inside the project folder (add a passphrase when prompted if not sure what this is just type PASSPHRASE): 
 ```sh
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
 ```
@@ -30,5 +30,5 @@ npm start
 
 - Navigate to:
 ```
-http://localhost:8080
+https://localhost:8080
 ```
