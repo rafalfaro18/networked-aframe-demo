@@ -1,7 +1,9 @@
 // Load required modules
-const http = require("http"); // http server core module
+require('dotenv').config()
+const https = require("https"); // http server core module
 const path = require("path");
 const express = require("express"); // web framework external module
+const fs = require('fs');
 
 // Set process name
 process.title = "networked-aframe-server";
@@ -27,7 +29,11 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Start Express http server
-const webServer = http.createServer(app);
+const webServer = https.createServer({
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+  passphrase: process.env.PASSPHRASE || 'PASSPHRASE'
+}, app);
 const io = require("socket.io")(webServer);
 
 const rooms = {};
